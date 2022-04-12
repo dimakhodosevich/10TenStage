@@ -7,7 +7,7 @@ public final class SameValue {
     }
 
     public static boolean checkTheSameValue(double ... numbers){
-        return true;
+        return false;
     }
 
 }

@@ -1,6 +1,7 @@
 package by.itstep.khodosevich.tenproject.task02;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 import static by.itstep.khodosevich.tenproject.task02.module.logic.SameOneNumber.*;
 
@@ -19,35 +20,35 @@ public class TestSameOneNumber {
         notSameNumberNegative = -12345;
         isSameNumberNegative = -132341;
         oneNumber = 7;
-        badMessage= "Your method works bad.";
+        badMessage = "Your method works bad.";
     }
 
     @Test
-    public void testCheckTheSameOneNumberPositive(){
+    public void testCheckTheSameOneNumberPositive() {
         boolean actual = checkTheSameOneNumber(isSameNumber);
         assertTrue(badMessage, actual);
     }
 
     @Test
-    public void testCheckTheSameOneNumberNegative(){
+    public void testCheckTheSameOneNumberNegative() {
         boolean actual = checkTheSameOneNumber(notSameNumber);
         assertFalse(badMessage, actual);
     }
 
     @Test
-    public void testCheckTheSameNegativeOneNumberPositive(){
+    public void testCheckTheSameNegativeOneNumberPositive() {
         boolean actual = checkTheSameOneNumber(isSameNumberNegative);
         assertTrue(badMessage, actual);
     }
 
     @Test
-    public void testCheckTheSameOneNegativeNumberNegative(){
+    public void testCheckTheSameOneNegativeNumberNegative() {
         boolean actual = checkTheSameOneNumber(notSameNumberNegative);
         assertFalse(badMessage, actual);
     }
 
-    @Test (expected = RuntimeException.class)
-    public void testCheckTheSameOneNumberWithOneNumber(){
+    @Test(expected = RuntimeException.class)
+    public void testCheckTheSameOneNumberWithOneNumber() {
         checkTheSameOneNumber(oneNumber);
     }
 }

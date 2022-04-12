@@ -3,8 +3,10 @@ package by.itstep.khodosevich.tenproject.task01.module.logic;
 public final class SameValue {
 
     private static String error;
+    private static final int MAX_VALUE_WITH_ONE_NUMBER;
 
     static {
+        MAX_VALUE_WITH_ONE_NUMBER = 9;
         error = "Your value has one number!!!\n";
     }
 
@@ -15,7 +17,10 @@ public final class SameValue {
     public static boolean checkTheSameValue(double number) {
 
         int numberInt = (int) number;
-        if (numberInt < 10) {
+
+        numberInt = numberInt > 0 ? numberInt : -numberInt;
+
+        if (numberInt <= MAX_VALUE_WITH_ONE_NUMBER) {
             System.err.print(error);
             throw new RuntimeException();
         }

@@ -1,6 +1,7 @@
 package by.itstep.khodosevich.tenproject.task01;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 import static by.itstep.khodosevich.tenproject.task01.module.logic.SameValue.*;
 
@@ -19,21 +20,21 @@ public class TestSameValue {
     }
 
     @Test()
-    public void testCheckTheSameValuePositive(){
+    public void testCheckTheSameValuePositive() {
         boolean actual = checkTheSameValue(sameValue);
-        assertTrue(badMessage,actual);
+        assertTrue(badMessage, actual);
     }
 
     @Test()
-    public void testCheckTheSameValueNegative(){
+    public void testCheckTheSameValueNegative() {
         boolean actual = checkTheSameValue(variousValue);
-        assertFalse(badMessage,actual);
+        assertFalse(badMessage, actual);
     }
 
     @Test(expected = RuntimeException.class)
-    public void testCheckTheSameValueWithOneNumberInValue(){
+    public void testCheckTheSameValueWithOneNumberInValue() {
         boolean actual = checkTheSameValue(oneNumber);
-        assertTrue(badMessage,actual);
+        assertTrue(badMessage, actual);
     }
 
 }

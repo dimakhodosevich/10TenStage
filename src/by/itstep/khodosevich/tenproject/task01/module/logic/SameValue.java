@@ -2,24 +2,31 @@ package by.itstep.khodosevich.tenproject.task01.module.logic;
 
 public final class SameValue {
 
-    private SameValue(){
+    private static String error;
+
+    static {
+        error = "Your value has one number!!!\n";
+    }
+
+    private SameValue() {
 
     }
 
-    public static boolean checkTheSameValue(double number){
+    public static boolean checkTheSameValue(double number) {
 
-        int numberInt = (int)number;
-        if(numberInt<10){
+        int numberInt = (int) number;
+        if (numberInt < 10) {
+            System.err.print(error);
             throw new RuntimeException();
         }
 
-        int last_number = numberInt%10;
-        numberInt/=10;
+        int last_number = numberInt % 10;
+        numberInt /= 10;
 
-        while(numberInt>0){
-            int previous_number = numberInt%10;
-            numberInt/=10;
-            if(last_number!=previous_number){
+        while (numberInt > 0) {
+            int previous_number = numberInt % 10;
+            numberInt /= 10;
+            if (last_number != previous_number) {
                 return false;
             }
             last_number = previous_number;

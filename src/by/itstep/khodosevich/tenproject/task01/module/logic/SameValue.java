@@ -6,8 +6,26 @@ public final class SameValue {
 
     }
 
-    public static boolean checkTheSameValue(double ... numbers){
-        return false;
+    public static boolean checkTheSameValue(double number){
+
+        int numberInt = (int)number;
+        if(numberInt<10){
+            throw new RuntimeException();
+        }
+
+        int last_number = numberInt%10;
+        numberInt/=10;
+
+        while(numberInt>0){
+            int previous_number = numberInt%10;
+            numberInt/=10;
+            if(last_number!=previous_number){
+                return false;
+            }
+            last_number = previous_number;
+        }
+
+        return true;
     }
 
 }

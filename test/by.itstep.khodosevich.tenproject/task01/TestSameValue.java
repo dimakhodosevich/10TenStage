@@ -7,45 +7,33 @@ import static by.itstep.khodosevich.tenproject.task01.module.logic.SameValue.*;
 public class TestSameValue {
 
     public static final int oneNumber;
-    public static final double[] sameValues;
-    public static final double[] variousValues;
-    public static String goodMessage;
+    public static final double sameValue;
+    public static final double variousValue;
+    public static String badMessage;
 
     static {
-        goodMessage = "Your method works bad!!!";
-        variousValues = new double[]{2, 35, 2, 6, 31, 4};
-        sameValues = new double[]{7,7,7,7,7,7,7};
+        badMessage = "Your method works bad!!!";
+        variousValue = 23456723;
+        sameValue = 777777777;
         oneNumber = 1;
     }
 
     @Test()
     public void testCheckTheSameValuePositive(){
-        boolean actual = checkTheSameValue(sameValues);
-        assertTrue(goodMessage,actual);
+        boolean actual = checkTheSameValue(sameValue);
+        assertTrue(badMessage,actual);
     }
 
     @Test()
     public void testCheckTheSameValueNegative(){
-        boolean actual = checkTheSameValue(variousValues);
-        assertTrue(goodMessage,actual);
-    }
-
-    @Test(expected = RuntimeException.class)
-    public void testCheckTheSameValueWithZeroLength(){
-        boolean actual = checkTheSameValue(new double[0]);
-        assertTrue(goodMessage,actual);
+        boolean actual = checkTheSameValue(variousValue);
+        assertFalse(badMessage,actual);
     }
 
     @Test(expected = RuntimeException.class)
     public void testCheckTheSameValueWithOneNumberInValue(){
         boolean actual = checkTheSameValue(oneNumber);
-        assertTrue(goodMessage,actual);
-    }
-
-    @Test(expected = RuntimeException.class)
-    public void testCheckTheSameValueWithNull(){
-        boolean actual = checkTheSameValue(null);
-        assertTrue(goodMessage,actual);
+        assertTrue(badMessage,actual);
     }
 
 }

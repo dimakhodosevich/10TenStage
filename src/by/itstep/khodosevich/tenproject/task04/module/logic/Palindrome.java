@@ -1,4 +1,4 @@
-package by.itstep.khodosevich.tenproject.task04.logic.module;
+package by.itstep.khodosevich.tenproject.task04.module.logic;
 
 public class Palindrome {
 

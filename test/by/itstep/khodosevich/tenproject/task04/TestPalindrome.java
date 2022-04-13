@@ -3,7 +3,7 @@ package by.itstep.khodosevich.tenproject.task04;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static by.itstep.khodosevich.tenproject.task04.logic.module.Palindrome.*;
+import static by.itstep.khodosevich.tenproject.task04.module.logic.Palindrome.*;
 
 public class TestPalindrome {
     public static final int isPalendromeNumber;

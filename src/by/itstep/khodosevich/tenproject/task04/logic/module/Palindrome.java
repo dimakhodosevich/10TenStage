@@ -4,17 +4,17 @@ public class Palindrome {
 
     public static final String errorMessage;
 
-    static{
-        errorMessage = "Your value is negative!!!";
+    static {
+        errorMessage = "Your value is negative!!!\n";
     }
 
-    private Palindrome(){
+    private Palindrome() {
     }
 
-    public static boolean checkPalindrome(double number ){
-        int numberInt = (int)number;
+    public static boolean checkPalindrome(double number) {
+        int numberInt = (int) number;
 
-        if(number<0){
+        if (number < 0) {
             System.err.print(errorMessage);
             throw new RuntimeException();
         }
@@ -24,17 +24,16 @@ public class Palindrome {
         int reverseNumber = 0;
         boolean result = true;
 
-        while (numberInt>0){
+        while (numberInt > 0) {
 
-            int lastNumber = numberInt%10;
-            numberInt/=10;
-            reverseNumber = reverseNumber*10 +lastNumber;
+            int lastNumber = numberInt % 10;
+            numberInt /= 10;
+            reverseNumber = reverseNumber * 10 + lastNumber;
         }
 
-        if(reverseNumber == tempIntNumber){
+        if (reverseNumber == tempIntNumber) {
             return result;
         }
-
 
         return !result;
     }

@@ -7,19 +7,29 @@ import static by.itstep.khodosevich.tenproject.task05.module.BankPercent.*;
 
 public class TestBankPercent {
 
-    public static final double money;
-    public static final double mount;
+    public static double money;
+    public static double mount;
     public static double percent;
 
     static {
-        money = 1000;
-        mount = 10;
+        money = 10;
+        mount = 1;
         percent = 10;
     }
 
     @Test
-    public void testCalculateBankCashPositive(){
-        double expected = money*mount*percent/100;
+    public void testCalculateBankCashPositiveOneMonth(){
+        double expected = 11;
+        double actual  = calculateBankCash(money, percent, mount);
+        double delta = 0.001;
+
+        assertEquals(expected, actual, delta);
+    }
+
+    @Test
+    public void testCalculateBankCashPositiveTreeMonth(){
+        mount = 3;
+        double expected = 13.31;
         double actual  = calculateBankCash(money, percent, mount);
         double delta = 0.001;
 

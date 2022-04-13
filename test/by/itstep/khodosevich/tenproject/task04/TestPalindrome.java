@@ -1,6 +1,7 @@
 package by.itstep.khodosevich.tenproject.task04;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 import static by.itstep.khodosevich.tenproject.task04.logic.module.Palindrome.*;
 
@@ -20,27 +21,26 @@ public class TestPalindrome {
     }
 
     @Test
-    public void testCheckPalindromePositive(){
+    public void testCheckPalindromePositive() {
         boolean actual = checkPalindrome(isPalendromeNumber);
         assertTrue(actual);
     }
 
     @Test
-    public void testCheckPalindromeNegative(){
+    public void testCheckPalindromeNegative() {
         boolean actual = checkPalindrome(notPalendromeNumber);
         assertFalse(actual);
     }
 
     @Test
-    public void testCheckPalindromeWithOneNumber(){
+    public void testCheckPalindromeWithOneNumber() {
         boolean actual = checkPalindrome(oneNumber);
         assertTrue(actual);
     }
 
-    @Test
-    public void testCheckPalindromeNegativeNumber(){
-        boolean actual = checkPalindrome(negativeNumber);
-        assertFalse(actual);
+    @Test(expected = RuntimeException.class)
+    public void testCheckPalindromeNegativeNumber() {
+        checkPalindrome(negativeNumber);
     }
 
 }

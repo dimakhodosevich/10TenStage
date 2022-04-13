@@ -12,6 +12,7 @@ public class TestAscendDescendNumber {
     public static final int isDescendNumber;
     public static final int notDescendNumber;
     public static final int oneNumber;
+    public static final int sameNumber;
     public static String errorMessage;
 
     static {
@@ -19,6 +20,7 @@ public class TestAscendDescendNumber {
         notAscendNumber = 123123;
         isDescendNumber = 654321;
         notDescendNumber = 654654;
+        sameNumber = 7777777;
         oneNumber = 7;
         errorMessage = "Your method works bad!!!";
     }
@@ -44,6 +46,12 @@ public class TestAscendDescendNumber {
     @Test
     public void testCheckAscendDescendNumberNotDescend() {
         boolean actual = checkAscendDescendNumber(notDescendNumber);
+        assertFalse(errorMessage, actual);
+    }
+
+    @Test
+    public void testCheckAscendDescendNumberWithSameNumber() {
+        boolean actual = checkAscendDescendNumber(sameNumber);
         assertFalse(errorMessage, actual);
     }
 

@@ -37,8 +37,7 @@ public final class SameOneNumber {
                 tempNumberInt /= 10;
 
                 if (previousNumber == lastNumber) {
-                    result = true;
-                    return result;
+                    return !result;
                 }
             }
 

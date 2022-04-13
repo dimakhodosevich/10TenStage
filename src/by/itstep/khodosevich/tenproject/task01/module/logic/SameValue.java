@@ -17,7 +17,7 @@ public final class SameValue {
     public static boolean checkTheSameValue(double number) {
 
         int numberInt = (int) number;
-
+        boolean result = true;
         numberInt = numberInt > 0 ? numberInt : -numberInt;
 
         if (numberInt <= MAX_VALUE_WITH_ONE_NUMBER) {
@@ -32,7 +32,7 @@ public final class SameValue {
             int previous_number = numberInt % 10;
             numberInt /= 10;
             if (last_number != previous_number) {
-                return false;
+                return !result;
             }
             last_number = previous_number;
         }

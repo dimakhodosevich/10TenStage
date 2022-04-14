@@ -8,27 +8,27 @@ public class LinerSearch {
         ERROR_MESSAGE = "Your value lower than 1.\n";
     }
 
-    private LinerSearch(){
+    private LinerSearch() {
 
     }
 
-    public static int getMaxNumber(double number){
-        int numberInt = (int)number;
+    public static int getMaxNumber(double number) {
+        int numberInt = (int) number;
 
-        if(numberInt<1){
+        if (numberInt < 1) {
             System.err.print(ERROR_MESSAGE);
             throw new RuntimeException();
         }
 
-        int lastNumber = numberInt%10;
-        numberInt/=10;
+        int lastNumber = numberInt % 10;
+        numberInt /= 10;
         int result = lastNumber;
 
-        while(numberInt>0){
-            int previousNumber = numberInt%10;
-            numberInt/=10;
+        while (numberInt > 0) {
+            int previousNumber = numberInt % 10;
+            numberInt /= 10;
 
-            if(lastNumber<previousNumber){
+            if (lastNumber < previousNumber) {
                 result = previousNumber;
             }
         }

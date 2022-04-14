@@ -1,6 +1,6 @@
 package by.itstep.khodosevich.tenproject.task04.controller;
 
-import by.itstep.khodosevich.tenproject.task01.view.Printer;
+import by.itstep.khodosevich.tenproject.task04.view.Printer;
 
 import java.util.Scanner;
 

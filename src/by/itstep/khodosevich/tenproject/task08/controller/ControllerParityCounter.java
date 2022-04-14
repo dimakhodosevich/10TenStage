@@ -1,7 +1,9 @@
 package by.itstep.khodosevich.tenproject.task08.controller;
 
-import by.itstep.khodosevich.tenproject.task01.view.Printer;
+import by.itstep.khodosevich.tenproject.task08.view.Printer;
+
 import java.util.Scanner;
+
 import static by.itstep.khodosevich.tenproject.task08.module.logic.ParityCounter.*;
 
 

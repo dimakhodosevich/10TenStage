@@ -1,4 +1,4 @@
-package by.itstep.khodosevich.tenproject.task08.view;
+package by.itstep.khodosevich.tenproject.task09.view;
 
 public class Printer {
     public static void print(Object message) {

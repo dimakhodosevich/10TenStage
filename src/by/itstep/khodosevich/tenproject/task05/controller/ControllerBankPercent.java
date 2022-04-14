@@ -2,7 +2,7 @@ package by.itstep.khodosevich.tenproject.task05.controller;
 
 import static by.itstep.khodosevich.tenproject.task05.module.BankPercent.*;
 
-import by.itstep.khodosevich.tenproject.task01.view.Printer;
+import by.itstep.khodosevich.tenproject.task05.view.Printer;
 
 import java.util.Scanner;
 

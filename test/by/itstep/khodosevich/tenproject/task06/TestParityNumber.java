@@ -27,11 +27,10 @@ public class TestParityNumber {
         assertFalse(ERROR_MESSAGE, actual);
     }
 
-    @Test
+    @Test(expected = RuntimeException.class)
     public void testCheckParityNumberWithZero() {
         int actual_number = 0;
-        boolean actual = checkParityNumber(actual_number);
-        assertTrue(ERROR_MESSAGE, actual);
+        checkParityNumber(actual_number);
     }
 
     @Test

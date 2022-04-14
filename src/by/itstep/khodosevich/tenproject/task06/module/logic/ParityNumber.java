@@ -5,7 +5,7 @@ public class ParityNumber {
     public static final String ERROR_MESSAGE;
 
     static {
-        ERROR_MESSAGE = "Your value is lower than 1.";
+        ERROR_MESSAGE = "Your value is lower than 1.\n";
     }
 
     private ParityNumber() {

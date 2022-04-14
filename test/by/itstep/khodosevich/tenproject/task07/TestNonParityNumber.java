@@ -10,7 +10,7 @@ public class TestNonParityNumber {
     private static final String ERROR_MESSAGE;
 
     static {
-        ERROR_MESSAGE = "Your method works bad!!!";
+        ERROR_MESSAGE = "Your method works bad!!!\n";
     }
 
 

@@ -39,7 +39,7 @@ public class TestNonParityNumber {
     public void testCheckNonParityNumberWithOneNumberNegative() {
         int actual_number = 8;
         boolean actual = checkNonParityNumber(actual_number);
-        assertTrue(ERROR_MESSAGE, actual);
+        assertFalse(ERROR_MESSAGE, actual);
     }
 
     @Test(expected = RuntimeException.class)
